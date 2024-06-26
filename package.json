@@ -2,6 +2,7 @@
   "name": "mini-proyecto-dos",
   "version": "0.0.0",
   "scripts": {
+    "deploy": "ng build --configuration production --base-href \"/(proyectoAnimal)/\" && npx angular-cli-ghpages",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -21,6 +22,7 @@
     "@angular/platform-browser": "^18.0.4",
     "@angular/platform-browser-dynamic": "^18.0.4",
     "@angular/router": "^18.0.4",
+    "@angular/service-worker": "^18.0.4",
     "@types/masonry-layout": "^4.2.7",
     "boostrap": "^2.0.0",
     "bootstrap": "^5.3.3",

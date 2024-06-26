@@ -1,6 +1,6 @@
 import { ApplicationConfig, provideZoneChangeDetection  } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { Injectable } from '@angular/core';
+import { Injectable, isDevMode } from '@angular/core';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, provideAuth } from "@angular/fire/auth";
@@ -9,6 +9,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideServiceWorker } from '@angular/service-worker';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAQy_3GIgHNxUF3HteNubgasuz6wJxrHNE",
@@ -28,7 +29,10 @@ export const appConfig: ApplicationConfig = {
   provideFirebaseApp(() => initializeApp(firebaseConfig)),
   provideAuth(() => getAuth()), provideFirestore(() => getFirestore())
   ]
-  )]
+  ), provideServiceWorker('ngsw-worker.js', {
+            enabled: !isDevMode(),
+            registrationStrategy: 'registerWhenStable:30000'
+          })]
   };
 
   const app = initializeApp(firebaseConfig);
