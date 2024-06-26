@@ -1,0 +1,14 @@
+<div class="fixed-position">
+    <button class="circular-button" (click)="toggleMenu()">
+        <img src="assets\img\Accesibilidad.png" alt="Accessibility Logo">
+    </button>
+  @if (menuVisible) {
+    <div class="menu">
+      <div class="icon-bar" id="menu">
+        <app-lectura></app-lectura>
+        <app-letra></app-letra>
+        <app-subrayado></app-subrayado>
+      </div>
+    </div>
+  }
+</div>

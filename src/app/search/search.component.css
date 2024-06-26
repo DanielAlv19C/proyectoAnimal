@@ -1,0 +1,16 @@
+.title {
+    color: rgb(29, 139, 163);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: "Lilita One", sans-serif;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 25px;
+    text-align: center;
+}

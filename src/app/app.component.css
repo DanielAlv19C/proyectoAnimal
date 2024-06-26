@@ -1,0 +1,9 @@
+.lector{
+    position: fixed;
+    bottom: 20px; /* Ajusta esto según la distancia desde la parte inferior */
+    right: 20px; /* Ajusta esto según la distancia desde la parte derecha */
+    background-color: white; /* Opcional: Para que se vea bien si es un fondo transparente */
+    padding: 10px; /* Opcional: Para dar un poco de espacio interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: Para darle un efecto de sombra */
+    z-index: 1000; /* Opcional: Asegura que esté por encima de otros elementos */
+}

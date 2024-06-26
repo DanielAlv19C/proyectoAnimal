@@ -1,0 +1,6 @@
+<p>Escoge una fecha presionando en el boton blanco:</p>
+<div class="text-center form-group mb-4">
+  <div class="card flex justify-content-center" style="background-color: black;">
+    <p-calendar [(ngModel)]="date" [minDate]="minDate" (onSelect)="onDateChange($event)"></p-calendar>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<br>
+<h1 class="text-center" style="font-weight: 600;">Animales en adopción</h1>
+<div class="card-group row row-cols-1 row-cols-lg-3 g-4">
+  <div class="col" *ngFor="let a of misAnimales; let i = index">
+    <div class="card h-100">
+      <img [src]="a.img" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{a.raza}}</h5>
+        <p class="card-text">{{a.color}}</p>
+        <p class="card-text">{{a.comportamiento}}</p>
+        <p class="card-text"><small class="text-muted">{{a.tiempo}}</small></p>
+      </div>
+      <a [routerLink]="['/animal', i]" class="mb-3 btn btn-outline-primary btn-block">Agendar Cita para adopción</a>
+    </div>
+  </div>
+
+
+</div>
+<br>
+<div class="container">
+<h2>Reporte de citas pasadas</h2>
+<div class="appointment" *ngFor="let appointment of pastAppointments">
+  Fecha: {{ appointment.fecha }}<br>
+  Hora: {{ appointment.hora }}<br>
+  Nombre: {{ appointment.nombre }}<br>
+  Apellido: {{ appointment.apellido }}<br>
+  Teléfono: {{ appointment.telefono }}<br>
+  Animal: <br>
+  Edad: {{ appointment.animal.edad }}<br>
+  Color: {{ appointment.animal.color }}<br>
+  Raza: {{ appointment.animal.raza }}<br>
+  Tiempo en el refugio: {{ appointment.animal.tiempo }}<br>
+  Comportamiento: {{ appointment.animal.comportamiento }}<br>
+  Tipo: {{ appointment.animal.tipo }}
+  <br>
+  <div style="display: flex; justify-content: center;"><button class="btn btn-danger" (click)="deleteRegistro(appointment.id)">Borrar</button></div>
+</div>
+
+<h2>Reporte de citas próximas</h2>
+<div class="appointment" *ngFor="let appointment of upcomingAppointments">
+  Fecha: {{ appointment.fecha }}<br>
+  Hora: {{ appointment.hora }}<br>
+  Nombre: {{ appointment.nombre }}<br>
+  Apellido: {{ appointment.apellido }}<br>
+  Teléfono: {{ appointment.telefono }}<br>
+  Animal: <br>
+  Edad: {{ appointment.animal.edad }}<br>
+  Color: {{ appointment.animal.color }}<br>
+  Raza: {{ appointment.animal.raza }}<br>
+  Tiempo en el refugio: {{ appointment.animal.tiempo }}<br>
+  Comportamiento: {{ appointment.animal.comportamiento }}<br>
+  Tipo: {{ appointment.animal.tipo }}
+  <div style="display: flex; justify-content: center;"><button class="btn btn-danger" (click)="deleteRegistro(appointment.id)">Borrar</button></div>
+</div>
+</div>

@@ -1,0 +1,31 @@
+<h2>Reporte de citas pasadas</h2>
+<div *ngFor="let appointment of pastAppointments">
+  Fecha: {{ appointment.fecha }},
+  Hora: {{ appointment.hora }},
+  Nombre: {{ appointment.nombre }},
+  Apellido: {{ appointment.apellido }},
+  Teléfono: {{ appointment.telefono }},
+  Animal: 
+  Edad: {{ appointment.animal.edad }},
+  Color: {{ appointment.animal.color }},
+  Raza: {{ appointment.animal.raza }},
+  Tiempo en el refugio: {{ appointment.animal.tiempo }},
+  Comportamiento: {{ appointment.animal.comportamiento }},
+  Tipo: {{ appointment.animal.tipo }}
+</div>
+
+<h2>Reporte de citas próximas</h2>
+<div *ngFor="let appointment of upcomingAppointments">
+  Fecha: {{ appointment.fecha }},
+  Hora: {{ appointment.hora }},
+  Nombre: {{ appointment.nombre }},
+  Apellido: {{ appointment.apellido }},
+  Teléfono: {{ appointment.telefono }},
+  Animal: 
+  Edad: {{ appointment.animal.edad }},
+  Color: {{ appointment.animal.color }},
+  Raza: {{ appointment.animal.raza }},
+  Tiempo en el refugio: {{ appointment.animal.tiempo }},
+  Comportamiento: {{ appointment.animal.comportamiento }},
+  Tipo: {{ appointment.animal.tipo }}
+</div>

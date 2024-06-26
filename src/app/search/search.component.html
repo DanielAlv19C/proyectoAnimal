@@ -1,0 +1,20 @@
+
+<div class="container">
+  <div class="title"><h2>Busqueda de Citas <i class="fa-solid fa-paw"></i></h2></div>
+
+  
+    @if (citas.length === 0) {
+      <mat-card><mat-card-content>No hay citas relacionadas al nombre</mat-card-content></mat-card>
+      <mat-divider></mat-divider>
+    } @else {
+      @for (cita of citas; track cita) {
+        <mat-card><mat-card-content>
+          <p>Nombre: {{ cita.nombre }} {{cita.apellido}}</p>
+          <p>Cita: {{ cita.fecha }} a las {{ cita.hora }} horas</p> 
+          <p>Animalito: {{ cita.animal.raza }}</p> 
+        </mat-card-content></mat-card>
+        <mat-divider></mat-divider>
+      }
+    }
+  
+</div>

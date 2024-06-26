@@ -1,0 +1,44 @@
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center; 
+}
+
+div.appointment {
+  background-color: #e8eaf6;
+  border: 1px solid #c5cae9; 
+  border-radius: 5px;
+  padding: 20px;
+  width: 300px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+div.appointment p {
+  margin: 0 0 10px;
+  line-height: 1.5;
+  font-family: Arial, sans-serif; 
+  color: #3f51b5; 
+
+}
+
+div.appointment p:last-child {
+  margin-bottom: 0;
+}
+
+.report-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.report-section h3 {
+  color: #3f51b5;  
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 300px;
+  margin: 0 auto;
+}

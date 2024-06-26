@@ -1,0 +1,15 @@
+<div class="container my-5 form-container">
+    <h3>Contáctanos</h3>
+    <form [formGroup]="contactoForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="email" class="form-label">Tú correo electrónico</label>
+            <input type="email" id="email" class="form-control" formControlName="email">
+            <div *ngIf="contactoForm.get('email')?.invalid && (contactoForm.get('email')?.dirty || contactoForm.get('email')?.touched)" class="text-danger">
+                <div *ngIf="contactoForm.get('email')?.errors?.['required']">El correo electrónico es obligatorio.</div>
+                <div *ngIf="contactoForm.get('email')?.errors?.['email']">El formato del correo no es válido.</div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="contactoForm.invalid">Enviar</button>
+    </form>
+  </div>
+  

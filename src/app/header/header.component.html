@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-xl navbar-light" style="background-color: #18708c;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="assets/media/Logo.png" class="img-fluid" style="max-width: 150px;" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/acerca" routerLinkActive="active">Acerca</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/contacto" routerLinkActive="active">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/tips" routerLinkActive="active">Tips</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/donadores" routerLinkActive="active">Donadores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/faq" routerLinkActive="active">FAQ</a>
+        </li>
+        <ng-container *ngIf="authService.checkLoginStatus(); else loggedOut">
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="/animales" routerLinkActive="active">Adopción</a>
+          </li>
+          <ng-container *ngIf="authService.checkAdmin(authService.getUsername())">
+            <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/estadisticas" routerLinkActive="active">Gráficas</a>
+            </li>
+          </ng-container>
+          <li class="nav-item">
+            <span class="nav-link">Bienvenido, <strong>{{ authService.getUsername() }}</strong></span>
+          </li>
+          <li class="nav-item">
+            <button (click)="logout()" class="btn btn-outline-info">Logout</button>
+          </li>
+        </ng-container>
+        <ng-template #loggedOut>
+          <li class="nav-item">
+            <a class="btn btn-outline-info" href="#" routerLink="/register" routerLinkActive="active">Login/Register</a>
+          </li>
+        </ng-template>
+      </ul>
+
+      <div class="d-flex align-items-center">
+        <input class="form-control me-2" type="text" placeholder="Buscar" aria-label="Search" #buscarTexto (keyup.enter)="nombreBusqueda(buscarTexto.value)">
+        <button class="btn btn-outline-info" (click)="nombreBusqueda(buscarTexto.value)" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet> 

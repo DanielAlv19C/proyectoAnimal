@@ -1,0 +1,126 @@
+body {
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.part1 {
+  position: relative;
+  background-image: url('../../assets/media/wallpaperflare.com_wallpaper.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.part1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Añade una capa de oscurecimiento */
+  z-index: 1;
+}
+
+.part1 .content {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: auto;
+}
+
+.part1 .content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: rgb(29, 139, 163);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.part1 .content p {
+  font-size: 1.2em;
+  color: rgb(29, 139, 163);
+}
+
+.part3 {
+  background-image: url('../../assets/media/DC.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px;
+}
+
+.div3 {
+  width: 50%;
+  margin-left: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  text-align: right;
+  color: rgb(29, 139, 163);
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.text {
+  margin-top: 0%;
+  margin-right: 10%;
+  padding: 20px;
+  font-size: 1.2em;
+}
+
+.div3 h3 {
+  color: black;
+  text-shadow: 2px 2px 4px rgba(255, 253, 253, 0.5);
+}
+
+.accordion-item {
+  background: none;
+  border: none;
+  margin: 15px 0;
+}
+
+.accordion-header .accordion-button {
+  background-color: rgb(29, 139, 163);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.accordion-header .accordion-button:not(.collapsed) {
+  background-color: rgb(29, 119, 143);
+  color: white;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(29, 139, 163);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

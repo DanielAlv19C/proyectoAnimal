@@ -1,0 +1,52 @@
+/* Estilos globales */
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Estilos específicos para la sección de contacto */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(29, 139, 163);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: rgb(0, 119, 140);
+}
+
+.text-danger {
+    color: rgb(220, 53, 69);
+    margin-top: 5px;
+}
+
+.text-danger div {
+    margin-top: 5px;
+}
+
+/* Ajustes adicionales según necesidades específicas */

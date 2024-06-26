@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>Phone</h1>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <fieldset>
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" formControlName="phone" required>
+    </fieldset>
+    <div id="recaptcha-container"></div>
+    <button type="submit">Send</button>
+  </form>
+
+  <br>
+
+  <form (ngSubmit)="verifyOTP()" [formGroup]="form">
+    <fieldset>
+      <label for="verificationCode">Verification Code:</label>
+      <input type="text" id="verificationCode" formControlName="verificationCode" required>
+    </fieldset>
+    <button type="submit">Verify OTP</button>
+  </form>
+
+  <!-- Alertas -->
+  <div *ngIf="showSuccessAlert" class="alert alert-success">
+    !Verficacion exitosa!
+    <button (click)="closeAlerts()" class="close">&times;</button>
+</div>
+<div *ngIf="showErrorAlert" class="alert alert-error">
+    Error: No se ha podido enviar el mensaje.
+    <button (click)="closeAlerts()" class="close">&times;</button>
+</div>
+
+</div>

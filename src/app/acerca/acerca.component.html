@@ -1,0 +1,108 @@
+<div class="container">
+  <h1 class="text-center my-5">Nuestros Veterinarios</h1>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/media/veterinarios/veterinario1.jpg" class="card-img-top" alt="Veterinario 1">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Christian Iván Escamilla Márquez</h5>
+          <p class="card-text">Especialista en medicina de pequeños animales con más de 10 años de experiencia.</p>
+          <p class="card-text">ID: 325629</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/media/veterinarios/veterinario3.jpg" class="card-img-top" alt="Veterinario 3">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Diego Emmanuel Muñoz Macías</h5>
+          <p class="card-text">Especialista en comportamiento animal y entrenamiento.</p>
+          <p class="card-text">ID: 327523</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/media/veterinarios/veterinario4.jpg" class="card-img-top" alt="Veterinario 4">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Aaron Antonio Raygoza Macías</h5>
+          <p class="card-text">Veterinario con amplia experiencia en medicina preventiva y salud pública.</p>
+          <p class="card-text">ID: 246778</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/media/veterinarios/veterinario5.jpg" class="card-img-top" alt="Veterinario 5">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Zuriel Said Zúñiga Delgadillo</h5>
+          <p class="card-text">Especialista en nutrición animal y manejo de peso.</p>
+          <p class="card-text">ID: 333917</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/media/veterinarios/veterinario6.jpg" class="card-img-top" alt="Veterinario 1">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Sergio Armando Valdivia Padilla</h5>
+          <p class="card-text">Experto en procedimientos quirúrgicos y atención de emergencias veterinarias..</p>
+          <p class="card-text">ID: 261207</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/media/veterinarios/veterinario7.jpg" class="card-img-top" alt="Veterinario 1">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Ricardo Álvarez Martinez</h5>
+          <p class="card-text">Especialista en detección y tratamiento de enfermedades con técnicas avanzadas de imagen.</p>
+          <p class="card-text">ID: 325629</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/media/veterinarios/veterinario8.jpg" class="card-img-top" alt="Veterinario 1">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Diego Ponce Álvarez</h5>
+          <p class="card-text">Dedicado a la recuperación física y mejora de la movilidad en animales.</p>
+          <p class="card-text">ID: 327656</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<br>
+
+<div class="part3">
+  <div class="div3">
+    <div class="text">
+      <h3>Únete a nuestro equipo</h3>
+      <p>Si estás interesado en ser parte de nuestro equipo de veterinarios, envíanos tu currículum.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center">
+  <h1 class="my-4">Escanea el codigo para obtener un adoptador</h1>
+  <button class="btn btn-primary mb-4" (click)="generateQRCode()">Generar QR</button>
+  <img [src]="qrCodeUrl" alt="QR Code" class="mb-4 qr-code" *ngIf="qrCodeUrl">
+  <!--<p><strong>Datos en el QR:</strong></p>
+  <pre>{{ qrData }}</pre>-->
+</div>
+
+
+<div class="university-project">
+  <h4>Proyecto Universitario</h4>
+  <p>Esta página web ha sido desarrollada como parte de un proyecto de la asignatura "Tecnologías Web" en la Universidad Autónoma de Aguascalientes.</p>
+</div>

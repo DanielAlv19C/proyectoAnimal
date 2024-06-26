@@ -1,0 +1,96 @@
+body{
+    background-color: rgb(255, 255, 255);
+
+}
+
+.part1{
+    background-image: url('../../assets/media/wallpaperflare.com_wallpaper.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    padding: 200px;
+    
+}
+.part3{
+    background-image: url('../../assets/media/DC.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    padding: 100px;
+   
+}
+
+.div3{
+    width: 50%;
+    
+    margin-left: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content:right;
+    text-align: right;
+    color: rgb(29, 139, 163);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.text{
+margin-top: 0%;
+margin-right: 10%;
+padding: 20px;
+}
+
+.div3 h3{
+    color:black;
+        text-shadow: 2px 2px 4px rgba(255, 253, 253, 0.5);
+    
+}
+
+.part1 .logo{
+    width: 1000px;
+    
+}
+
+.part2{
+    display: flex;
+    padding: 100px;
+}
+
+.div1{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    text-align: left;
+}
+
+.div2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px;
+}
+
+.div2 img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+hr {
+    border: none;
+    border-top: 2px solid rgb(29, 139, 163);
+    width: 100px; 
+}

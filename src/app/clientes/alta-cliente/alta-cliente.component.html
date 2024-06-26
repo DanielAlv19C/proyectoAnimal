@@ -1,0 +1,46 @@
+<div id="container">
+  <h2>Alta clientes</h2>
+
+  <form (ngSubmit)="nuevoCliente()" #clienteForm="ngForm">
+    <p>
+      <span>Nombre:</span>
+      <input type="text" class="form-control bg-secondary text-white" [(ngModel)]="cliente.nombre" name="nombre" required>
+    </p>
+
+    <p>
+      <span>Apellido:</span>
+      <input type="text" class="form-control bg-secondary text-white" [(ngModel)]="cliente.apellido" name="apellido" required>
+    </p>
+
+    <p>
+      <span>Teléfono:</span>
+      <input type="text" class="form-control bg-secondary text-white" [(ngModel)]="cliente.telefono" name="telefono" required>
+    </p>
+    <p>
+      <span>Correo:</span>
+      <input type="text" class="form-control bg-secondary text-white" [(ngModel)]="cliente.email" name="email" required>
+    </p>
+
+    <p>
+      <app-calendario (dateChange)="onDateChange($event)"></app-calendario>
+    </p>
+
+    <p>
+      <span>Selecciona una hora:</span>
+      <select name="hora" class="form-control bg-secondary text-white" [(ngModel)]="horaSeleccionada">
+        @for (hora of horasDisponibles; track hora) {
+          <option [value]="hora" [disabled]="horasDeshabilitadas.includes(hora)">
+            {{ hora }}:00
+          </option>
+        }
+      </select>
+    </p>
+    <p>
+      <button type="submit" class="btn btn-primary bg-dark" [disabled]="!clienteForm.valid">Guardar</button>
+    </p>
+  </form>
+  <div *ngIf="loading$ | async" class="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+</div>
+

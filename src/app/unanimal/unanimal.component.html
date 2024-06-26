@@ -1,0 +1,36 @@
+<h1 class="animate__animated animate__bounce">{{animal.raza}}</h1>
+<hr>
+<div class="row animated fadeIn fast">
+    <div class="col md-4 text-center">
+        <img width="300px" src="{{animal.img}}" alt="" class="img-fluid">
+        <br><br>
+        @if (animal.tipo == 'Perro') {
+            <img src="assets/img/perro.jpg" width="100px">
+        }
+        @else {
+            <img src="assets/img/gato.jpg" width="100px">
+        }
+        <br><br>
+        <a [routerLink]="['/animales']" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+
+    <div class="col md-8">
+        <h3>{{animal.raza}}</h3>
+        <hr>
+        <p>
+            Es {{animal.comportamiento}}
+        </p>
+        <p>
+            {{animal.tiempo}}
+        </p>
+        <p>
+            Color: {{animal.color}}
+        </p>
+        <p>
+            Edad: {{animal.edad}} años
+        </p>
+        
+    </div>
+</div>
+
+<app-alta-cliente [animal]="animal"></app-alta-cliente>

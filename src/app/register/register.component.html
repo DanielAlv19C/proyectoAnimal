@@ -1,0 +1,20 @@
+<div class="perrito">
+  <div class="container">
+    <h1>Bienvenido</h1>
+  <p>Selecciona una opción:</p>
+  
+  <!-- Botón para registrar -->
+  <button (click)="redirectToCreateUser()" class="button">Registrar</button>
+  
+  <!-- Botón para login -->
+  <button (click)="redirectToLoginEmail()" class="button">Login</button>
+  
+  <!-- Opciones de login (inicialmente ocultas) -->
+  <div *ngIf="mostrarOpcionesLogin" class="opciones-login">
+    <p>Selecciona método de login:</p>
+    <button (click)="redirectToLoginEmail()" class="button">Correo</button>
+    <button (click)="redirectToLoginPhone()" class="button">SMS</button>
+  </div>
+  
+  </div>
+</div>

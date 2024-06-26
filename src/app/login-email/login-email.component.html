@@ -1,0 +1,36 @@
+
+
+<div class="container">
+    
+    <h1>Email</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <fieldset>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="correo" required autofocus formControlName="email">
+        </fieldset>
+        <fieldset>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required formControlName="password">
+        </fieldset>
+        <fieldset>
+            <button type="submit">Login</button>
+        </fieldset>
+    </form>
+    <div *ngIf="loading$ | async" class="loading-overlay">
+        <div class="spinner"></div>
+      </div>
+
+    <!-- Alertas -->
+    <div *ngIf="showSuccessAlert" class="alert alert-success">
+        ¡Login exitoso!
+        <button (click)="closeAlerts()" class="close">&times;</button>
+    </div>
+    <div *ngIf="showErrorAlert" class="alert alert-error">
+        Error: Correo o contraseña incorrectos.
+        <button (click)="closeAlerts()" class="close">&times;</button>
+    </div>
+    <div *ngIf="showExtraAlert" class="alert alert-extra">
+        Ha ocurrido un error. Por favor, inténtalo más tarde.
+        <button (click)="closeAlerts()" class="close">&times;</button>
+    </div>
+</div>
